@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Électroménager & Équipements - MFE Sénégal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .product-card { transition: all 0.2s ease-in-out; }
+        .product-card:hover { transform: translateY(-3px); shadow-lg; }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen flex flex-col">
+
+    <!-- TOP BAR DE CONTACT -->
+    <div class="bg-slate-900 text-slate-300 text-xs py-2.5 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-6">
+                <a href="tel:+221767812193" class="hover:text-sky-400 transition-colors flex items-center">
+                    <i class="fa-solid fa-phone text-sky-400 mr-2"></i> +221 76 781 21 93
+                </a>
+                <a href="mailto:pryncefroid@gmail.com" class="hover:text-sky-400 transition-colors flex items-center">
+                    <i class="fa-solid fa-envelope text-sky-400 mr-2"></i> pryncefroid@gmail.com
+                </a>
+                <span class="hidden md:flex items-center"><i class="fa-solid fa-location-dot text-sky-400 mr-2"></i> Dakar, Sénégal</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="https://wa.me/221767812193" target="_blank" class="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center">
+                    <i class="fa-brands fa-whatsapp text-sm mr-1.5"></i> WhatsApp Direct
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER / NAVBAR -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+            
+            <a href="index.html" class="flex items-center space-x-3 shrink-0">
+                <img src="images/logo.png" alt="Logo MFE" class="h-12 w-auto object-contain" onerror="this.style.display='none'">
+                <div>
+                    <span class="text-xl font-black tracking-tight text-slate-900 block leading-tight">MONSIEUR FROID ÉQUIPEMENT</span>
+                    <span class="text-xs font-bold text-sky-600 block tracking-wider uppercase">Boutique Électroménager</span>
+                </div>
+            </a>
+
+            <!-- NAVIGATION PRINCIPALE -->
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-bold text-slate-700">
+                <a href="index.html" class="hover:text-sky-600 transition-colors pb-1">ACCUEIL</a>
+                <a href="froid-industriel.html" class="hover:text-sky-600 transition-colors pb-1">FROID INDUSTRIEL</a>
+                <a href="climatisation.html" class="hover:text-sky-600 transition-colors pb-1">CLIMATISATION</a>
+                <a href="equipements.html" class="text-sky-600 border-b-2 border-sky-600 pb-1">ÉQUIPEMENTS</a>
+            </nav>
+
+            <!-- BOUTON DU PANIER AVEC COMPTEUR -->
+            <button onclick="openCartModal()" class="relative bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs md:text-sm px-4 py-2.5 rounded-xl shadow-md transition-all flex items-center space-x-2">
+                <i class="fa-solid fa-cart-shopping text-base"></i>
+                <span>Mon Panier</span>
+                <span id="cart-badge" class="bg-emerald-500 text-white text-[11px] font-black w-5 h-5 rounded-full flex items-center justify-center border-2 border-white">0</span>
+            </button>
+        </div>
+
+        <!-- MENU MOBILE -->
+        <nav class="lg:hidden bg-slate-100 border-t border-slate-200 px-4 py-2 flex justify-around text-xs font-bold text-slate-700">
+            <a href="index.html" class="hover:text-sky-600">ACCUEIL</a>
+            <a href="froid-industriel.html" class="hover:text-sky-600">FROID IND.</a>
+            <a href="climatisation.html" class="hover:text-sky-600">CLIMATISATION</a>
+            <a href="equipements.html" class="text-sky-600">ÉQUIPEMENTS</a>
+        </nav>
+    </header>
+
+    <!-- BANNIÈRE HERO -->
+    <section class="bg-slate-900 text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto text-center max-w-3xl">
+            <span class="inline-block bg-sky-500/20 text-sky-400 text-xs font-bold px-3.5 py-1.5 rounded-full border border-sky-400/30 uppercase tracking-wider mb-3">
+                Boutique en Ligne
+            </span>
+            <h1 class="text-3xl md:text-4xl font-black tracking-tight mb-3">
+                Électroménager & Équipements de Maison
+            </h1>
+            <p class="text-slate-300 text-sm md:text-base">
+                Sélectionnez vos articles, ajoutez-les au panier et envoyez votre commande directement à MFE pour confirmation et livraison.
+            </p>
+        </div>
+    </section>
+
+    <!-- BOUTIQUE ET FILTRES PAR CATÉGORIES (Officielles selon cahier des charges) -->
+    <main class="max-w-7xl mx-auto px-4 py-8 flex-1 w-full">
+        
+        <!-- CATÉGORIES BARRE -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-8 border-b border-slate-200 pb-4">
+            <button onclick="filterCategory('all')" class="cat-btn active bg-sky-600 text-white font-bold text-xs px-4 py-2 rounded-xl transition-colors">Toutes les catégories</button>
+            <button onclick="filterCategory('Cuisine')" class="cat-btn bg-white border border-slate-200 text-slate-700 font-bold text-xs px-4 py-2 rounded-xl hover:bg-slate-100 transition-colors">Cuisine</button>
+            <button onclick="filterCategory('Froid domestique')" class="cat-btn bg-white border border-slate-200 text-slate-700 font-bold text-xs px-4 py-2 rounded-xl hover:bg-slate-100 transition-colors">Froid domestique</button>
+            <button onclick="filterCategory('Lavage')" class="cat-btn bg-white border border-slate-200 text-slate-700 font-bold text-xs px-4 py-2 rounded-xl hover:bg-slate-100 transition-colors">Lavage</button>
+            <button onclick="filterCategory('Image & son')" class="cat-btn bg-white border border-slate-200 text-slate-700 font-bold text-xs px-4 py-2 rounded-xl hover:bg-slate-100 transition-colors">Image & son</button>
+            <button onclick="filterCategory('Petit électroménager')" class="cat-btn bg-white border border-slate-200 text-slate-700 font-bold text-xs px-4 py-2 rounded-xl hover:bg-slate-100 transition-colors">Petit électroménager</button>
+        </div>
+
+        <!-- GRILLE PRODUITS -->
+        <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Injecté via JavaScript -->
+        </div>
+    </main>
+
+    <!-- MODAL DU PANIER ET DE LA COMMANDE -->
+    <div id="cart-modal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-lg rounded-2xl shadow-2xl p-6 relative max-h-[90vh] overflow-y-auto">
+            
+            <button onclick="closeCartModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h3 class="text-xl font-black text-slate-900 mb-4 flex items-center">
+                <i class="fa-solid fa-basket-shopping text-sky-600 mr-2"></i> Mon Panier de Commande
+            </h3>
+
+            <!-- LISTE DES ARTICLES DANS LE PANIER -->
+            <div id="cart-items-container" class="space-y-3 mb-6 border-b border-slate-200 pb-4">
+                <!-- Rempli par JS -->
+            </div>
+
+            <!-- RÉCAPITULATIF SOUS-TOTAL -->
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 mb-6 space-y-2 text-xs">
+                <div class="flex justify-between text-slate-600 font-medium">
+                    <span>Sous-total articles :</span>
+                    <span id="cart-subtotal" class="font-bold text-slate-900">0 FCFA</span>
+                </div>
+                <div class="flex justify-between text-slate-600 font-medium">
+                    <span>Frais de livraison :</span>
+                    <span class="text-emerald-600 font-bold">À confirmer par MFE selon zone</span>
+                </div>
+            </div>
+
+            <!-- FORMULAIRE COORDONNÉES & LIVRAISON (Conforme cahier des charges) -->
+            <form onsubmit="submitCartToWhatsApp(event)" class="space-y-3">
+                <h4 class="text-xs font-bold text-sky-700 uppercase tracking-wider">Informations de livraison</h4>
+                
+                <div>
+                    <input type="text" id="cust-name" required placeholder="Nom complet *" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 text-xs outline-none focus:ring-2 focus:ring-sky-500">
+                </div>
+
+                <div>
+                    <input type="tel" id="cust-phone" required placeholder="Téléphone / WhatsApp *" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 text-xs outline-none focus:ring-2 focus:ring-sky-500">
+                </div>
+
+                <div class="grid grid-cols-2 gap-2">
+                    <input type="text" id="cust-city" required placeholder="Ville (ex: Dakar) *" class="bg-slate-50 border border-slate-300 rounded-lg p-2.5 text-xs outline-none focus:ring-2 focus:ring-sky-500">
+                    <input type="text" id="cust-quarter" required placeholder="Quartier *" class="bg-slate-50 border border-slate-300 rounded-lg p-2.5 text-xs outline-none focus:ring-2 focus:ring-sky-500">
+                </div>
+
+                <div>
+                    <textarea id="cust-address" rows="2" placeholder="Adresse précise ou repère de livraison *" required class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 text-xs outline-none focus:ring-2 focus:ring-sky-500"></textarea>
+                </div>
+
+                <button type="submit" id="btn-submit-cart" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition-colors flex items-center justify-center space-x-2 text-sm">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Envoyer la commande à MFE via WhatsApp</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-10 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <span class="text-white font-bold text-base block mb-2">MONSIEUR FROID ÉQUIPEMENT (MFE)</span>
+                <p class="text-slate-400 leading-relaxed mb-3">Vente, fourniture et livraison d'équipements électroménagers au Sénégal.</p>
+                <p class="text-slate-500">© 2026 MFE. Tous droits réservés.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-sm mb-3">Navigation</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-white">ACCUEIL</a></li>
+                    <li><a href="froid-industriel.html" class="hover:text-white">FROID INDUSTRIEL</a></li>
+                    <li><a href="climatisation.html" class="hover:text-white">CLIMATISATION</a></li>
+                    <li><a href="equipements.html" class="hover:text-white">ÉQUIPEMENTS</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-sm mb-3">Contact MFE</h4>
+                <p class="mb-1"><i class="fa-solid fa-phone mr-2 text-sky-400"></i> +221 76 781 21 93</p>
+                <p class="mb-1"><i class="fa-brands fa-whatsapp mr-2 text-emerald-400"></i> +221 76 781 21 93</p>
+                <p><i class="fa-solid fa-envelope mr-2 text-sky-400"></i> pryncefroid@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DU PANIER ET DE LA BOUTIQUE EN LIGNE -->
+    <script>
+        // CATALOGUE DES PRODUITS ÉLECTROMÉNAGER & ÉQUIPEMENTS (Facilement modifiable)
+        const productsData = [
+            // CUISINE
+            { id: 101, category: "Cuisine", name: "Four Encastrable Ventilé Inox 60cm", price: 185000, image: "images/eq1.png" },
+            { id: 102, category: "Cuisine", name: "Cuisinière à Gaz 4 Feux Inox avec Four", price: 145000, image: "images/eq2.png" },
+            { id: 103, category: "Cuisine", name: "Plaque de Cuisson Encastrable 4 Feux Vitrocéramique", price: 95000, image: "images/eq3.png" },
+            { id: 104, category: "Cuisine", name: "Hotte Aspirante Inox Silencieuse", price: 75000, image: "images/eq4.png" },
+
+            // FROID DOMESTIQUE
+            { id: 201, category: "Froid domestique", name: "Réfrigérateur Combiné 320L NoFrost", price: 285000, image: "images/eq5.png" },
+            { id: 202, category: "Froid domestique", name: "Congélateur Coffre 400 Litres Grand Volume", price: 235000, image: "images/eq6.png" },
+            { id: 203, category: "Froid domestique", name: "Réfrigérateur Américain Side-by-Side Inox 520L", price: 580000, image: "images/eq7.png" },
+
+            // LAVAGE
+            { id: 301, category: "Lavage", name: "Machine à Laver Automatique Hublot 8kg Inverter", price: 245000, image: "images/eq8.png" },
+            { id: 302, category: "Lavage", name: "Lave-Linge Séchant 10kg / 6kg Smart", price: 395000, image: "images/eq9.png" },
+
+            // IMAGE & SON
+            { id: 401, category: "Image & son", name: "Téléviseur Smart TV 55 pouces 4K UHD Android", price: 265000, image: "images/eq10.png" },
+            { id: 402, category: "Image & son", name: "Téléviseur Smart TV 43 pouces Full HD", price: 165000, image: "images/eq11.png" },
+
+            // PETIT ÉLECTROMÉNAGER
+            { id: 501, category: "Petit électroménager", name: "Friteuse sans Huile Air Fryer 5.5L Digital", price: 45000, image: "images/eq12.png" },
+            { id: 502, category: "Petit électroménager", name: "Micro-ondes Grill 25 Litres Digital Inox", price: 55000, image: "images/eq13.png" },
+            { id: 503, category: "Petit électroménager", name: "Robot Multifonction & Blendeur 1.5L 800W", price: 38000, image: "images/eq14.png" }
+        ];
+
+        let cart = [];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts(productsData);
+        });
+
+        // FILTRAGE PAR CATÉGORIE
+        function filterCategory(catName) {
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                btn.classList.remove('bg-sky-600', 'text-white');
+                btn.classList.add('bg-white', 'text-slate-700', 'border');
+            });
+            event.target.classList.remove('bg-white', 'text-slate-700', 'border');
+            event.target.classList.add('bg-sky-600', 'text-white');
+
+            if (catName === 'all') {
+                renderProducts(productsData);
+            } else {
+                const filtered = productsData.filter(p => p.category === catName);
+                renderProducts(filtered);
+            }
+        }
+
+        // AFFICHER LA GRILLE DES PRODUITS
+        function renderProducts(items) {
+            const grid = document.getElementById('products-grid');
+            grid.innerHTML = items.map(p => `
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden product-card flex flex-col justify-between">
+                    <div>
+                        <div class="h-44 bg-slate-100 relative overflow-hidden flex items-center justify-center">
+                            <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=500&q=80'">
+                            <span class="absolute top-3 left-3 bg-slate-900/80 text-white text-[10px] font-bold px-2 py-0.5 rounded">
+                                ${p.category}
+                            </span>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-slate-900 text-sm leading-snug mb-2">${p.name}</h3>
+                            <div class="text-lg font-black text-sky-700">${p.price.toLocaleString('fr-FR')} FCFA</div>
+                        </div>
+                    </div>
+                    <div class="p-4 pt-0">
+                        <button onclick="addToCart(${p.id})" class="w-full bg-slate-900 hover:bg-sky-600 text-white font-bold text-xs py-2.5 rounded-xl transition-colors flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span>Ajouter au panier</span>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // GESTION DU PANIER
+        function addToCart(productId) {
+            const product = productsData.find(p => p.id === productId);
+            const existingItem = cart.find(item => item.id === productId);
+
+            if (existingItem) {
+                existingItem.qty += 1;
+            } else {
+                cart.push({ ...product, qty: 1 });
+            }
+
+            updateCartBadge();
+            alert(`"${product.name}" a été ajouté à votre panier !`);
+        }
+
+        function updateCartBadge() {
+            const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+            document.getElementById('cart-badge').innerText = totalItems;
+        }
+
+        function openCartModal() {
+            renderCartItems();
+            document.getElementById('cart-modal').classList.remove('hidden');
+        }
+
+        function closeCartModal() {
+            document.getElementById('cart-modal').classList.add('hidden');
+        }
+
+        function changeQty(productId, change) {
+            const item = cart.find(i => i.id === productId);
+            if (item) {
+                item.qty += change;
+                if (item.qty <= 0) {
+                    cart = cart.filter(i => i.id !== productId);
+                }
+            }
+            updateCartBadge();
+            renderCartItems();
+        }
+
+        function renderCartItems() {
+            const container = document.getElementById('cart-items-container');
+            const subtotalElem = document.getElementById('cart-subtotal');
+
+            if (cart.length === 0) {
+                container.innerHTML = `<p class="text-xs text-slate-500 text-center py-6">Votre panier est vide.</p>`;
+                subtotalElem.innerText = `0 FCFA`;
+                document.getElementById('btn-submit-cart').disabled = true;
+                return;
+            }
+
+            document.getElementById('btn-submit-cart').disabled = false;
+            let subtotal = 0;
+
+            container.innerHTML = cart.map(item => {
+                const itemTotal = item.price * item.qty;
+                subtotal += itemTotal;
+                return `
+                    <div class="flex items-center justify-between bg-slate-50 p-2.5 rounded-xl border border-slate-200 text-xs">
+                        <div class="flex-1 pr-2">
+                            <div class="font-bold text-slate-900">${item.name}</div>
+                            <div class="text-slate-500">${item.price.toLocaleString('fr-FR')} FCFA / unité</div>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <button onclick="changeQty(${item.id}, -1)" class="w-6 h-6 bg-slate-200 hover:bg-slate-300 rounded font-bold text-slate-800">-</button>
+                            <span class="font-bold text-slate-900">${item.qty}</span>
+                            <button onclick="changeQty(${item.id}, 1)" class="w-6 h-6 bg-slate-200 hover:bg-slate-300 rounded font-bold text-slate-800">+</button>
+                        </div>
+                        <div class="font-black text-slate-900 ml-3 min-w-[70px] text-right">
+                            ${itemTotal.toLocaleString('fr-FR')} F
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            subtotalElem.innerText = `${subtotal.toLocaleString('fr-FR')} FCFA`;
+        }
+
+        // SOUMISSION DE LA COMMANDE WHATSAPP
+        function submitCartToWhatsApp(e) {
+            e.preventDefault();
+
+            if (cart.length === 0) {
+                alert("Votre panier est vide !");
+                return;
+            }
+
+            const name = document.getElementById('cust-name').value;
+            const phone = document.getElementById('cust-phone').value;
+            const city = document.getElementById('cust-city').value;
+            const quarter = document.getElementById('cust-quarter').value;
+            const address = document.getElementById('cust-address').value;
+
+            let subtotal = 0;
+            let message = `*NOUVELLE COMMANDE ÉLECTROMÉNAGER - MFE*\n\n`;
+            message += `👤 *Client:* ${name}\n`;
+            message += `📞 *Contact:* ${phone}\n`;
+            message += `📍 *Livraison:* ${city}, ${quarter}\n`;
+            message += `🏠 *Adresse:* ${address}\n\n`;
+            message += `🛒 *ARTICLES COMMANDÉS:*\n`;
+
+            cart.forEach(item => {
+                const totalItem = item.price * item.qty;
+                subtotal += totalItem;
+                message += `• ${item.name} (x${item.qty}) : ${totalItem.toLocaleString('fr-FR')} FCFA\n`;
+            });
+
+            message += `\n💰 *SOUS-TOTAL ARTICLES:* ${subtotal.toLocaleString('fr-FR')} FCFA\n`;
+            message += `🚚 *Frais de livraison:* À confirmer par MFE\n\n`;
+            message += `Merci de me confirmer la disponibilité et le délai de livraison !`;
+
+            const mfePhone = "221767812193";
+            const whatsappUrl = `https://wa.me/${mfePhone}?text=${encodeURIComponent(message)}`;
+
+            closeCartModal();
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>

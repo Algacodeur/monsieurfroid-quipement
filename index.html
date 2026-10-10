@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MFE - Monsieur Froid Équipement | Froid Industriel, Climatisation & Équipements au Sénégal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0284c7',
+                            darkblue: '#0369a1',
+                            navy: '#0f172a',
+                            accent: '#25d366'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(3, 105, 161, 0.85) 100%), 
+                        url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen flex flex-col">
+
+    <!-- TOP BAR DE CONTACT -->
+    <div class="bg-slate-900 text-slate-300 text-xs py-2.5 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-6">
+                <a href="tel:+221767812193" class="hover:text-sky-400 transition-colors flex items-center">
+                    <i class="fa-solid fa-phone text-sky-400 mr-2"></i> +221 76 781 21 93
+                </a>
+                <a href="mailto:pryncefroid@gmail.com" class="hover:text-sky-400 transition-colors flex items-center">
+                    <i class="fa-solid fa-envelope text-sky-400 mr-2"></i> pryncefroid@gmail.com
+                </a>
+                <span class="hidden md:flex items-center"><i class="fa-solid fa-location-dot text-sky-400 mr-2"></i> Dakar, Sénégal</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="https://wa.me/221767812193?text=Bonjour%20MFE,%20je%20souhaite%20une%20information." target="_blank" class="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center">
+                    <i class="fa-brands fa-whatsapp text-sm mr-1.5"></i> WhatsApp Direct
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER / NAVBAR -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+            
+            <!-- ESPACE LOGO ENTREPRISE -->
+            <a href="#" class="flex items-center space-x-3 shrink-0">
+                <img src="images/5931593455370964922.png" alt="Logo MFE" class="h-12 w-auto object-contain">
+                <div>
+                    <span class="text-xl font-black tracking-tight text-slate-900 block leading-tight">MONSIEUR FROID ÉQUIPEMENT</span>
+                    <span class="text-xs font-bold text-sky-600 block tracking-wider uppercase">Froid Industriel & Climatisation</span>
+                </div>
+            </a>
+
+            <!-- NAVIGATION PRINCIPALE SUR LA PAGE D'ACCUEIL -->
+<nav class="hidden lg:flex items-center space-x-8 text-sm font-bold text-slate-700">
+    <a href="index.html" class="hover:text-sky-600 transition-colors pb-1">ACCUEIL</a>
+    <a href="froid-industriel.html" class="hover:text-sky-600 transition-colors pb-1">FROID INDUSTRIEL</a>
+    <a href="climatisation.html" class="hover:text-sky-600 transition-colors pb-1">CLIMATISATION</a>
+    <a href="equipements.html" class="hover:text-sky-600 transition-colors pb-1">ÉQUIPEMENTS</a>
+</nav>
+
+            <!-- BOUTON DEVIS APPARENT -->
+            <div class="flex items-center space-x-3">
+                <a href="#devis" class="bg-sky-600 hover:bg-sky-700 text-white text-xs md:text-sm font-bold px-4 py-2.5 rounded-lg shadow-md transition-all flex items-center space-x-2">
+                    <i class="fa-solid fa-file-signature"></i>
+                    <span>Demander un Devis</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- MENU MOBILE NAVBAR -->
+        <nav class="lg:hidden bg-slate-100 border-t border-slate-200 px-4 py-2 flex justify-around text-xs font-bold text-slate-700">
+            <a href="#accueil" class="text-sky-600">ACCUEIL</a>
+            <a href="#froid-industriel" class="hover:text-sky-600">FROID INDUSTRIEL</a>
+            <a href="#climatisation" class="hover:text-sky-600">CLIMATISATION</a>
+            <a href="#equipements" class="hover:text-sky-600">ÉQUIPEMENTS</a>
+        </nav>
+    </header>
+
+    <!-- SECTION HERO / BANNIÈRE D'ACCUEIL (FROID INDUSTRIEL CIBLÉ DÈS L'ARRIVÉE) -->
+    <section id="accueil" class="hero-bg text-white py-16 md:py-24 px-4 relative">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-8">
+                <span class="inline-flex items-center space-x-2 bg-sky-500/20 text-sky-300 text-xs font-bold px-3.5 py-1.5 rounded-full border border-sky-400/30 mb-4 backdrop-blur-sm">
+                    <i class="fa-solid fa-snowflake text-sky-400"></i>
+                    <span>Spécialiste Froid Industriel & Chambres Froides au Sénégal</span>
+                </span>
+                <h1 class="text-3xl md:text-5xl font-black tracking-tight mb-4 leading-tight">
+                    Votre partenaire en froid, climatisation et équipements professionnels
+                </h1>
+                <p class="text-slate-200 text-base md:text-lg mb-8 max-w-3xl leading-relaxed">
+                    Bienvenue chez **Monsieur Froid Équipement (MFE)**. Nous vous accompagnons dans l’étude, la fourniture, l’installation, la mise en service, la maintenance et le dépannage de vos installations frigorifiques et de climatisation.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#devis" class="bg-sky-500 hover:bg-sky-600 text-white font-bold text-sm px-6 py-3 rounded-xl transition-all shadow-lg flex items-center space-x-2">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Discuter de votre projet</span>
+                    </a>
+                    <a href="https://wa.me/221767812193?text=Bonjour%20MFE,%20je%20souhaite%20un%20conseil%20technique" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-6 py-3 rounded-xl transition-all shadow-lg flex items-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Conseil Technique Direct</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- CARTE ACCÈS RAPIDE - SPECIALITÉ CHAMBRES FROIDES -->
+            <div class="md:col-span-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-2xl">
+                <h3 class="text-lg font-bold text-white mb-4 border-b border-white/10 pb-2 flex items-center">
+                    <i class="fa-solid fa-temperature-arrow-down text-sky-400 mr-2"></i> Nos Réalisations Phares
+                </h3>
+                <ul class="space-y-3 text-sm text-slate-200">
+                    <li class="flex items-start space-x-2">
+                        <i class="fa-solid fa-circle-check text-sky-400 mt-1"></i>
+                        <span>Chambres Froides Positives & Négatives</span>
+                    </li>
+                    <li class="flex items-start space-x-2">
+                        <i class="fa-solid fa-circle-check text-sky-400 mt-1"></i>
+                        <span>Installations Frigorifiques Solaires & Hybrides</span>
+                    </li>
+                    <li class="flex items-start space-x-2">
+                        <i class="fa-solid fa-circle-check text-sky-400 mt-1"></i>
+                        <span>Systèmes de Climatisation Centralisée & Tertiaire</span>
+                    </li>
+                    <li class="flex items-start space-x-2">
+                        <i class="fa-solid fa-circle-check text-sky-400 mt-1"></i>
+                        <span>Équipements pour Hôtels, Restaurants & Industries</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION PRÉSENTATION & ENGAGEMENT MFE -->
+    <section class="py-16 px-4 bg-white border-b border-slate-200">
+        <div class="max-w-5xl mx-auto text-center">
+            <span class="text-sky-600 font-extrabold text-xs tracking-wider uppercase bg-sky-50 px-3 py-1 rounded-full border border-sky-100">À propos de MFE</span>
+            <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-3 mb-6">
+                Le savoir-faire technique au service de vos projets
+            </h2>
+            <div class="space-y-4 text-slate-600 text-base leading-relaxed text-justify md:text-center">
+                <p>
+                    Spécialisée dans le froid industriel, la climatisation et les équipements électroménagers, **MFE** accompagne ses clients dans l’étude, la fourniture, l’installation, la mise en service, la maintenance et le dépannage de leurs équipements.
+                </p>
+                <p>
+                    Nous intervenons notamment dans la réalisation de **chambres froides positives et négatives**, les installations frigorifiques professionnelles, les systèmes de climatisation ainsi que la fourniture d’équipements destinés aux entreprises, commerces, restaurants, hôtels et industries.
+                </p>
+                <p>
+                    Notre engagement repose sur la qualité du travail, le sérieux de nos interventions, le conseil technique et la recherche de solutions adaptées à chaque projet. Nous mettons notre savoir-faire au service de nos clients afin de contribuer à la performance, à la fiabilité et à la durabilité de leurs installations.
+                </p>
+                <p class="font-medium text-slate-800">
+                    Chez MFE, chaque projet mérite une attention particulière. De la première demande d’information jusqu’à la mise en service de votre installation, nous vous accompagnons avec une approche professionnelle, des conseils adaptés et un suivi technique.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION NOS DOMAINES D'EXPERTISE -->
+    <section class="py-16 px-4 bg-slate-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-black text-slate-900">Nos Domaines d’Expertise</h2>
+                <p class="text-slate-500 text-sm mt-2">Des solutions techniques adaptées aux exigences des particuliers et des professionnels</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- FROID INDUSTRIEL -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-snowflake"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Froid Industriel</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Étude, conception, installation et maintenance de chambres froides positives, négatives et solutions frigorifiques solaires ou hybrides.
+                    </p>
+                </div>
+
+                <!-- CLIMATISATION -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Climatisation</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Vente, installation, mise en service, entretien et dépannage de tous types de systèmes de climatisation.
+                    </p>
+                </div>
+
+                <!-- ÉLECTROMÉNAGER -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-plug"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Électroménager</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Vente et conseil pour le choix d’équipements adaptés aux besoins des particuliers et des professionnels.
+                    </p>
+                </div>
+
+                <!-- MAINTENANCE ET DÉPANNAGE -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-wrench"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Maintenance & Dépannage</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Diagnostic, entretien préventif et interventions techniques sur les équipements relevant de nos domaines d’activité.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION POURQUOI CHOISIR MFE ? & AMBITION -->
+    <section class="py-16 px-4 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-sky-600 font-extrabold text-xs tracking-wider uppercase bg-sky-50 px-3 py-1 rounded-full border border-sky-100">Notre Engagemenet</span>
+                <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-3 mb-4">Pourquoi choisir MFE ?</h2>
+                <p class="text-slate-600 text-base leading-relaxed mb-6">
+                    Parce que nous croyons qu’un équipement performant doit être accompagné d’un service professionnel. Nous privilégions l’écoute du client, le conseil, la qualité d’exécution et le suivi de nos réalisations.
+                </p>
+                <div class="space-y-3">
+                    <div class="flex items-center space-x-3 text-slate-800 font-semibold text-sm">
+                        <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs">✓</div>
+                        <span>Écoute active et conseils personnalisés</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-slate-800 font-semibold text-sm">
+                        <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs">✓</div>
+                        <span>Qualité d'exécution et suivi technique rigoureux</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-slate-800 font-semibold text-sm">
+                        <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs">✓</div>
+                        <span>Recherche permanente de solutions durables et fiables</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-900 text-white p-8 rounded-3xl relative overflow-hidden">
+                <div class="relative z-10">
+                    <h3 class="text-xl font-bold mb-3 text-sky-400">Notre Ambition</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        Devenir un partenaire de référence au Sénégal dans le froid industriel, la climatisation et les solutions d’équipement, en construisant des relations durables fondées sur la confiance et la satisfaction de nos clients.
+                    </p>
+                    <div class="border-t border-slate-800 pt-4 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">MONSIEUR FROID ÉQUIPEMENT</span>
+                        <span class="text-xs font-bold text-sky-400">MFE Sénégal</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION QUESTIONNAIRE DEVIS SUR-MESURE MFE -->
+<section id="devis" class="py-16 px-4 bg-slate-100 border-t border-slate-200">
+    <div class="max-w-3xl mx-auto bg-white p-6 md:p-10 rounded-2xl border border-slate-200 shadow-md">
+        
+        <div class="text-center mb-8">
+            <span class="bg-sky-100 text-sky-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Configurateur Rapide</span>
+            <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-2">Demande de Devis sur-mesure</h2>
+            <p class="text-slate-600 text-sm mt-1">Remplissez ces quelques informations pour recevoir une estimation adaptée à votre projet.</p>
+        </div>
+
+        <form id="quote-configurator-form" onsubmit="sendQuoteToWhatsApp(event)" class="space-y-6">
+            
+            <!-- 1. TYPE DE PROJET -->
+            <div class="border-b border-slate-200 pb-6">
+                <label class="block text-sm font-bold text-slate-900 mb-3">1. Quel est le type de votre projet ?</label>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                    <label class="flex items-center p-3 border border-slate-200 rounded-xl cursor-pointer hover:bg-sky-50 transition-colors">
+                        <input type="radio" name="project_type" value="Chambre Froide Positive (+2°C / +8°C)" checked class="w-4 h-4 text-sky-600">
+                        <span class="ml-2.5 font-medium text-slate-800">Chambre Froide Positive</span>
+                    </label>
+                    <label class="flex items-center p-3 border border-slate-200 rounded-xl cursor-pointer hover:bg-sky-50 transition-colors">
+                        <input type="radio" name="project_type" value="Chambre Froide Négative (-18°C / -25°C)" class="w-4 h-4 text-sky-600">
+                        <span class="ml-2.5 font-medium text-slate-800">Chambre Froide Négative</span>
+                    </label>
+                    <label class="flex items-center p-3 border border-slate-200 rounded-xl cursor-pointer hover:bg-sky-50 transition-colors">
+                        <input type="radio" name="project_type" value="Installation Climatisation" class="w-4 h-4 text-sky-600">
+                        <span class="ml-2.5 font-medium text-slate-800">Climatisation Pro / Résidentielle</span>
+                    </label>
+                    <label class="flex items-center p-3 border border-slate-200 rounded-xl cursor-pointer hover:bg-sky-50 transition-colors">
+                        <input type="radio" name="project_type" value="Maintenance / Dépannage" class="w-4 h-4 text-sky-600">
+                        <span class="ml-2.5 font-medium text-slate-800">Maintenance & Dépannage</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- 2. DIMENSIONS (Compris dans ton image 1) -->
+            <div class="border-b border-slate-200 pb-6">
+                <label class="block text-sm font-bold text-slate-900 mb-1">2. Quelles sont les dimensions (si connues) ?</label>
+                <p class="text-xs text-slate-500 mb-3">Vous ne connaissez pas les dimensions ? Vous pouvez laisser ces champs vides.</p>
+                <div class="grid grid-cols-3 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Longueur (m)</label>
+                        <input type="number" id="dim-length" placeholder="Ex: 4" step="0.1" class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-sm focus:bg-white focus:ring-2 focus:ring-sky-500 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Largeur (m)</label>
+                        <input type="number" id="dim-width" placeholder="Ex: 3" step="0.1" class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-sm focus:bg-white focus:ring-2 focus:ring-sky-500 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Hauteur (m)</label>
+                        <input type="number" id="dim-height" placeholder="Ex: 2.5" step="0.1" class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-sm focus:bg-white focus:ring-2 focus:ring-sky-500 outline-none">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. PRODUITS À CONSERVER (Compris dans ton image 1) -->
+            <div class="border-b border-slate-200 pb-6">
+                <label class="block text-sm font-bold text-slate-900 mb-3">3. Quels produits souhaitez-vous conserver ?</label>
+                <div class="space-y-2 text-sm">
+                    <label class="flex items-center space-x-3 cursor-pointer">
+                        <input type="radio" name="product_type" value="Fruits et légumes" checked class="w-4 h-4 text-sky-600">
+                        <span class="text-slate-800">Fruits et légumes</span>
+                    </label>
+                    <label class="flex items-center space-x-3 cursor-pointer">
+                        <input type="radio" name="product_type" value="Viande et volaille" class="w-4 h-4 text-sky-600">
+                        <span class="text-slate-800">Viande et volaille</span>
+                    </label>
+                    <label class="flex items-center space-x-3 cursor-pointer">
+                        <input type="radio" name="product_type" value="Poissons et fruits de mer" class="w-4 h-4 text-sky-600">
+                        <span class="text-slate-800">Poissons et fruits de mer</span>
+                    </label>
+                    <label class="flex items-center space-x-3 cursor-pointer">
+                        <input type="radio" name="product_type" value="Boissons et produits laitiers" class="w-4 h-4 text-sky-600">
+                        <span class="text-slate-800">Boissons et produits laitiers</span>
+                    </label>
+                    <label class="flex items-center space-x-3 cursor-pointer">
+                        <input type="radio" name="product_type" value="Frites et produits surgelés" class="w-4 h-4 text-sky-600">
+                        <span class="text-slate-800">Frites et produits surgelés</span>
+                    </label>
+                    <label class="flex items-center space-x-3 cursor-pointer">
+                        <input type="radio" name="product_type" value="Autres produits" class="w-4 h-4 text-sky-600">
+                        <span class="text-slate-800">Autres produits</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- 4. VILLE DU PROJET (Compris dans tes images 1 & 2) -->
+            <div class="border-b border-slate-200 pb-6">
+                <label class="block text-sm font-bold text-slate-900 mb-2">4. Ville du projet *</label>
+                <input type="text" id="project-city" required placeholder="Ex: Dakar, Thiès, Saint-Louis..." class="w-full bg-slate-50 border border-slate-300 rounded-xl p-3 text-sm focus:bg-white focus:ring-2 focus:ring-sky-500 outline-none">
+            </div>
+
+            <!-- 5. ALIMENTATION SOUHAITÉE (Compris dans ton image 2) -->
+            <div class="border-b border-slate-200 pb-6">
+                <label class="block text-sm font-bold text-slate-900 mb-3">5. Alimentation souhaitée</label>
+                <div class="space-y-2 text-sm">
+                    <label class="flex items-center space-x-3 cursor-pointer">
+                        <input type="radio" name="power_source" value="Électricité (Senelec)" checked class="w-4 h-4 text-sky-600">
+                        <span class="text-slate-800">Électricité</span>
+                    </label>
+                    <label class="flex items-center space-x-3 cursor-pointer">
+                        <input type="radio" name="power_source" value="Solaire" class="w-4 h-4 text-sky-600">
+                        <span class="text-slate-800">Solaire</span>
+                    </label>
+                    <label class="flex items-center space-x-3 cursor-pointer">
+                        <input type="radio" name="power_source" value="Hybride (solaire + électricité)" class="w-4 h-4 text-sky-600">
+                        <span class="text-slate-800">Hybride (solaire + électricité)</span>
+                    </label>
+                    <label class="flex items-center space-x-3 cursor-pointer">
+                        <input type="radio" name="power_source" value="Besoin de conseils" class="w-4 h-4 text-sky-600">
+                        <span class="text-slate-800">J'ai besoin de conseils</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- 6. COORDONNÉES DU CLIENT -->
+            <div>
+                <label class="block text-sm font-bold text-slate-900 mb-3">6. Vos Coordonnées</label>
+                <div class="grid sm:grid-cols-2 gap-3">
+                    <input type="text" id="client-name" required placeholder="Nom / Entreprise *" class="bg-slate-50 border border-slate-300 rounded-xl p-3 text-sm focus:bg-white focus:ring-2 focus:ring-sky-500 outline-none">
+                    <input type="tel" id="client-phone" required placeholder="Numéro Téléphone / WhatsApp *" class="bg-slate-50 border border-slate-300 rounded-xl p-3 text-sm focus:bg-white focus:ring-2 focus:ring-sky-500 outline-none">
+                </div>
+            </div>
+
+            <!-- BOUTON D'ENVOI DIRECT PAR WHATSAPP -->
+            <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg transition-colors flex items-center justify-center space-x-2 text-base">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span>Envoyer ma demande via WhatsApp</span>
+            </button>
+        </form>
+    </div>
+</section>
+
+    <!-- FOOTER OFFICIEL MFE -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <div class="flex items-center space-x-3 text-white font-bold text-lg mb-3">
+                    <div class="w-8 h-8 bg-sky-600 text-white rounded-lg flex items-center justify-center text-sm">MFE</div>
+                    <span>MONSIEUR FROID ÉQUIPEMENT</span>
+                </div>
+                <p class="text-slate-400 leading-relaxed mb-4">
+                    Le savoir-faire technique au service de vos projets.
+                </p>
+                <p class="text-slate-500">© 2026 MONSIEUR FROID ÉQUIPEMENT (MFE). Tous droits réservés.</p>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold text-sm mb-3">Navigation</h4>
+                <ul class="space-y-2">
+                    <li><a href="#accueil" class="hover:text-white">ACCUEIL</a></li>
+                    <li><a href="#froid-industriel" class="hover:text-white">FROID INDUSTRIEL</a></li>
+                    <li><a href="#climatisation" class="hover:text-white">CLIMATISATION</a></li>
+                    <li><a href="#equipements" class="hover:text-white">ÉQUIPEMENTS</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold text-sm mb-3">Coordonnées</h4>
+                <p class="mb-2"><i class="fa-solid fa-location-dot mr-2 text-sky-400"></i> Dakar, Sénégal</p>
+                <p class="mb-2"><i class="fa-solid fa-phone mr-2 text-sky-400"></i> 76 781 21 93</p>
+                <p class="mb-2"><i class="fa-brands fa-whatsapp mr-2 text-emerald-400"></i> 76 781 21 93</p>
+                <p><i class="fa-solid fa-envelope mr-2 text-sky-400"></i> pryncefroid@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOUTON FLOTTANT WHATSAPP DIRECT -->
+    <a href="https://wa.me/221767812193?text=Bonjour%20MFE,%20je%20souhaite%20des%20informations%20sur%20vos%20services." target="_blank" 
+       class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg text-2xl z-50 transition-transform hover:scale-110">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            alert("Votre message a été transmis à l'équipe MFE ! Nous vous recontacterons sous peu.");
+        }
+    </script>
+</body>
+</html>
+<script>
+function sendQuoteToWhatsApp(e) {
+    e.preventDefault();
+
+    // Récupération des valeurs du formulaire
+    const projectType = document.querySelector('input[name="project_type"]:checked').value;
+    const dimL = document.getElementById('dim-length').value || "Non précisé";
+    const dimW = document.getElementById('dim-width').value || "Non précisé";
+    const dimH = document.getElementById('dim-height').value || "Non précisé";
+    const productType = document.querySelector('input[name="product_type"]:checked').value;
+    const city = document.getElementById('project-city').value;
+    const powerSource = document.querySelector('input[name="power_source"]:checked').value;
+    const name = document.getElementById('client-name').value;
+    const phone = document.getElementById('client-phone').value;
+
+    // Construction du message WhatsApp
+    let message = `*DEMANDE DE DEVIS SUR-MESURE - MFE*\n\n`;
+    message += `👤 *Nom / Entreprise:* ${name}\n`;
+    message += `📞 *Contact:* ${phone}\n`;
+    message += `📍 *Ville du projet:* ${city}\n\n`;
+    message += `📋 *DÉTAILS DU BESOIN:*\n`;
+    message += `• *Type de projet:* ${projectType}\n`;
+    message += `• *Dimensions:* ${dimL}m x ${dimW}m x ${dimH}m\n`;
+    message += `• *Produits à conserver:* ${productType}\n`;
+    message += `• *Alimentation:* ${powerSource}\n\n`;
+    message += `Merci de me contacter pour établir ma proposition de devis.`;
+
+    // Redirection vers WhatsApp avec ton numéro MFE (+221 76 781 21 93)
+    const mfePhone = "221767812193";
+    const whatsappUrl = `https://wa.me/${mfePhone}?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappUrl, '_blank');
+}
+</script>

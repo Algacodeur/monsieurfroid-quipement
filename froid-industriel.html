@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Froid Industriel - MFE | Chambres Froides au Sénégal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0284c7',
+                            darkblue: '#0369a1',
+                            navy: '#0f172a',
+                            accent: '#25d366'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background-color: #f8fafc; color: #1e293b; }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen flex flex-col">
+
+    <!-- TOP BAR DE CONTACT -->
+    <div class="bg-slate-900 text-slate-300 text-xs py-2.5 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-6">
+                <a href="tel:+221767812193" class="hover:text-sky-400 transition-colors flex items-center">
+                    <i class="fa-solid fa-phone text-sky-400 mr-2"></i> +221 76 781 21 93
+                </a>
+                <a href="mailto:pryncefroid@gmail.com" class="hover:text-sky-400 transition-colors flex items-center">
+                    <i class="fa-solid fa-envelope text-sky-400 mr-2"></i> pryncefroid@gmail.com
+                </a>
+                <span class="hidden md:flex items-center"><i class="fa-solid fa-location-dot text-sky-400 mr-2"></i> Dakar, Sénégal</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="https://wa.me/221767812193?text=Bonjour%20MFE,%20je%20souhaite%20une%20information." target="_blank" class="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center">
+                    <i class="fa-brands fa-whatsapp text-sm mr-1.5"></i> WhatsApp Direct
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER / NAVBAR (LIENS MIS À JOUR VERS LES PAGES SÉPARÉES) -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+            
+            <!-- ESPACE LOGO ENTREPRISE -->
+            <a href="index.html" class="flex items-center space-x-3 shrink-0">
+                <img src="images/logo.png" alt="Logo MFE" class="h-12 w-auto object-contain" onerror="this.style.display='none'">
+                <div>
+                    <span class="text-xl font-black tracking-tight text-slate-900 block leading-tight">MONSIEUR FROID ÉQUIPEMENT</span>
+                    <span class="text-xs font-bold text-sky-600 block tracking-wider uppercase">Froid Industriel & Climatisation</span>
+                </div>
+            </a>
+
+            <!-- NAVIGATION PRINCIPALE -->
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-bold text-slate-700">
+                <a href="index.html" class="hover:text-sky-600 transition-colors pb-1">ACCUEIL</a>
+                <a href="froid-industriel.html" class="text-sky-600 border-b-2 border-sky-600 pb-1">FROID INDUSTRIEL</a>
+                <a href="climatisation.html" class="hover:text-sky-600 transition-colors pb-1">CLIMATISATION</a>
+                <a href="equipements.html" class="hover:text-sky-600 transition-colors pb-1">ÉQUIPEMENTS</a>
+            </nav>
+
+            <!-- BOUTON DEVIS APPARENT -->
+            <div class="flex items-center space-x-3">
+                <a href="#devis-chambre-froide" class="bg-sky-600 hover:bg-sky-700 text-white text-xs md:text-sm font-bold px-4 py-2.5 rounded-lg shadow-md transition-all flex items-center space-x-2">
+                    <i class="fa-solid fa-file-signature"></i>
+                    <span>Devis Chambre Froide</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- MENU MOBILE NAVBAR -->
+        <nav class="lg:hidden bg-slate-100 border-t border-slate-200 px-4 py-2 flex justify-around text-xs font-bold text-slate-700">
+            <a href="index.html" class="hover:text-sky-600">ACCUEIL</a>
+            <a href="froid-industriel.html" class="text-sky-600">FROID IND.</a>
+            <a href="climatisation.html" class="hover:text-sky-600">CLIMATISATION</a>
+            <a href="equipements.html" class="hover:text-sky-600">ÉQUIPEMENTS</a>
+        </nav>
+    </header>
+
+    <!-- SECTION HERO FROID INDUSTRIEL -->
+    <section class="bg-slate-900 text-white py-16 px-4 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto text-center max-w-3xl relative z-10">
+            <span class="inline-block bg-sky-500/20 text-sky-400 text-xs font-bold px-3.5 py-1.5 rounded-full border border-sky-400/30 uppercase tracking-wider mb-4">
+                Expertise & Solutions Techniques
+            </span>
+            <h1 class="text-3xl md:text-5xl font-black tracking-tight mb-4 leading-tight">
+                Solutions de froid industriel adaptées à votre activité
+            </h1>
+            <p class="text-slate-300 text-base md:text-lg mb-8 leading-relaxed">
+                Conception, fourniture, installation et maintenance de chambres froides positives et négatives au Sénégal.
+            </p>
+            <div>
+                <a href="#devis-chambre-froide" class="bg-sky-500 hover:bg-sky-600 text-white font-bold text-sm px-6 py-3.5 rounded-xl transition-all shadow-lg inline-flex items-center space-x-2">
+                    <i class="fa-solid fa-snowflake"></i>
+                    <span>Demander un devis de chambre froide</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION BLOCS / SERVICES DÉTAILLÉS (BASÉ SUR TON TABLEAU) -->
+    <section class="py-16 px-4 bg-slate-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-black text-slate-900">Nos Domaines d'Intervention en Froid</h2>
+                <p class="text-slate-500 text-sm mt-2">Découvrez nos solutions sur-mesure pour la conservation professionnelle</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- 1. CHAMBRE FROIDE POSITIVE -->
+                <div class="bg-white border border-slate-200 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-sky-100 text-sky-600 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">
+                            <i class="fa-solid fa-apple-whole"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Chambre Froide Positive</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Conservation de fruits, légumes, boissons, fleurs et produits frais. Présentation des usages, des options et des réalisations disponibles pour le maintien de la fraîcheur optimale.
+                        </p>
+                        <ul class="space-y-2 text-xs font-medium text-slate-700 mb-6">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-sky-600 mr-2"></i> Plage de température : +2°C à +8°C</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-sky-600 mr-2"></i> Panneaux sandwichs isolés haute performance</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-sky-600 mr-2"></i> Groupes frigorifiques monoblocs ou biblocs</li>
+                        </ul>
+                    </div>
+                    <a href="#devis-chambre-froide" onclick="setChambreType('Positive (+2°C / +8°C)')" class="text-sky-600 hover:text-sky-700 text-xs font-bold flex items-center space-x-1">
+                        <span>Configurer une chambre positive</span>
+                        <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2. CHAMBRE FROIDE NÉGATIVE -->
+                <div class="bg-white border border-slate-200 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-cyan-100 text-cyan-600 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">
+                            <i class="fa-solid fa-cube"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Chambre Froide Négative</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Conservation congelée : viande, poisson, volaille, produits surgelés et glace. Présentation des usages et des solutions robustes adaptées au grand froid.
+                        </p>
+                        <ul class="space-y-2 text-xs font-medium text-slate-700 mb-6">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-cyan-600 mr-2"></i> Plage de température : -18°C à -25°C</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-cyan-600 mr-2"></i> Sol renforcé isolé & accessoires anti-givrage</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-cyan-600 mr-2"></i> Systèmes frigorifiques à haute efficacité</li>
+                        </ul>
+                    </div>
+                    <a href="#devis-chambre-froide" onclick="setChambreType('Négative (-18°C / -25°C)')" class="text-cyan-600 hover:text-cyan-700 text-xs font-bold flex items-center space-x-1">
+                        <span>Configurer une chambre négative</span>
+                        <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 3. ÉTUDE & INSTALLATION -->
+                <div class="bg-white border border-slate-200 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Étude & Installation</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Étude du besoin, dimensions, température souhaitée, isolation, groupe frigorifique, évaporateur, alimentation électrique et contraintes spécifiques du site.
+                        </p>
+                    </div>
+                    <span class="text-amber-600 text-xs font-bold">Accompagnement ingénierie MFE</span>
+                </div>
+
+                <!-- 4. ENTRETIEN & DÉPANNAGE -->
+                <div class="bg-white border border-slate-200 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Entretien & Dépannage</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Présentation des services de maintenance préventive, recherche de panne et intervention technique rapide sur tous types d'équipements frigorifiques.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/221767812193?text=Bonjour%20MFE,%20je%20souhaite%20planifier%20une%20maintenance%20ou%20un%20dépannage." target="_blank" class="text-emerald-600 hover:text-emerald-700 text-xs font-bold flex items-center space-x-1">
+                        <i class="fa-brands fa-whatsapp mr-1"></i>
+                        <span>Contact intervention rapide</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION FORMULAIRE : DEMANDER UN DEVIS DE CHAMBRE FROIDE -->
+    <section id="devis-chambre-froide" class="py-16 px-4 bg-white border-t border-slate-200">
+        <div class="max-w-3xl mx-auto bg-slate-50 p-6 md:p-10 rounded-3xl border border-slate-200 shadow-xl">
+            <div class="text-center mb-8">
+                <span class="bg-sky-100 text-sky-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Formulaire Officiel MFE</span>
+                <h3 class="text-2xl md:text-3xl font-black text-slate-900 mt-2">Demander un devis de chambre froide</h3>
+                <p class="text-slate-600 text-sm mt-1">Remplissez ce formulaire pour qualifier votre projet. MFE vous établira un devis technique et commercial détaillé (pas de calcul automatique).</p>
+            </div>
+
+            <form onsubmit="submitChambreQuote(event)" class="space-y-6">
+                
+                <!-- COORDONNÉES -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 space-y-4">
+                    <h4 class="text-sm font-bold text-sky-700 uppercase tracking-wider border-b pb-2">1. Coordonnées</h4>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Nom / Entreprise *</label>
+                            <input type="text" id="q-name" required placeholder="Votre nom ou société" class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-sm outline-none focus:ring-2 focus:ring-sky-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Téléphone / WhatsApp *</label>
+                            <input type="tel" id="q-phone" required placeholder="76 781 21 93" class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-sm outline-none focus:ring-2 focus:ring-sky-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">E-mail (facultatif)</label>
+                            <input type="email" id="q-email" placeholder="votremail@domaine.com" class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-sm outline-none focus:ring-2 focus:ring-sky-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Ville / Lieu du chantier *</label>
+                            <input type="text" id="q-city" required placeholder="Ex: Dakar, Thiès..." class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-sm outline-none focus:ring-2 focus:ring-sky-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJET -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 space-y-4">
+                    <h4 class="text-sm font-bold text-sky-700 uppercase tracking-wider border-b pb-2">2. Projet</h4>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Type de chambre froide *</label>
+                            <select id="q-type" class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-sm outline-none focus:ring-2 focus:ring-sky-500">
+                                <option value="Positive (+2°C / +8°C)">Positive (+2°C / +8°C)</option>
+                                <option value="Négative (-18°C / -25°C)">Négative (-18°C / -25°C)</option>
+                                <option value="Bitempérature / Autre">Bitempérature / Autre</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Activité *</label>
+                            <input type="text" id="q-activity" required placeholder="Ex: Fruits, Viande, Poisson, Glace..." class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-sm outline-none focus:ring-2 focus:ring-sky-500">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Dimensions ou volume souhaité</label>
+                        <input type="text" id="q-volume" placeholder="Ex: 4m x 3m x 2.5m (ou 30 m³)" class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-sm outline-none focus:ring-2 focus:ring-sky-500">
+                    </div>
+                </div>
+
+                <!-- TECHNIQUE -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 space-y-4">
+                    <h4 class="text-sm font-bold text-sky-700 uppercase tracking-wider border-b pb-2">3. Technique</h4>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Température souhaitée</label>
+                            <input type="text" id="q-temp" placeholder="Ex: +4°C ou -20°C" class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-sm outline-none focus:ring-2 focus:ring-sky-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Quantité / Fréquence d'entrée des produits</label>
+                            <input type="text" id="q-rotation" placeholder="Ex: 500 kg par jour" class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-sm outline-none focus:ring-2 focus:ring-sky-500">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Alimentation électrique / Solaire</label>
+                        <select id="q-power" class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-sm outline-none focus:ring-2 focus:ring-sky-500">
+                            <option value="Électricité standard (Senelec)">Électricité standard (Senelec)</option>
+                            <option value="Solaire autonome">Solaire autonome</option>
+                            <option value="Hybride (Solaire + Électricité)">Hybride (Solaire + Électricité)</option>
+                            <option value="Besoin de conseils">Besoin de conseils</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- CALENDRIER -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 space-y-4">
+                    <h4 class="text-sm font-bold text-sky-700 uppercase tracking-wider border-b pb-2">4. Calendrier & Remarques</h4>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Date prévue de réalisation</label>
+                            <input type="text" id="q-date" placeholder="Ex: Dès que possible, mois prochain..." class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-sm outline-none focus:ring-2 focus:ring-sky-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Type de projet</label>
+                            <select id="q-status" class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-sm outline-none focus:ring-2 focus:ring-sky-500">
+                                <option value="Projet neuf">Projet neuf</option>
+                                <option value="Remplacement / Extension">Remplacement / Extension</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Budget indicatif ou commentaires (facultatif)</label>
+                        <textarea id="q-comments" rows="3" placeholder="Précisez vos remarques ou contraintes d'emplacement..." class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-sm outline-none focus:ring-2 focus:ring-sky-500"></textarea>
+                    </div>
+                </div>
+
+                <!-- SUBMIT BUTTON WHATSAPP -->
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 rounded-xl shadow-lg transition-colors flex items-center justify-center space-x-2 text-base">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>Transmettre ma demande de devis à MFE</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-12 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <div class="flex items-center space-x-3 text-white font-bold text-lg mb-3">
+                    <div class="w-8 h-8 bg-sky-600 text-white rounded-lg flex items-center justify-center text-sm">MFE</div>
+                    <span>MONSIEUR FROID ÉQUIPEMENT</span>
+                </div>
+                <p class="text-slate-400 leading-relaxed mb-4">Le savoir-faire technique au service de vos projets.</p>
+                <p class="text-slate-500">© 2026 MONSIEUR FROID ÉQUIPEMENT (MFE). Tous droits réservés.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-sm mb-3">Navigation</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-white">ACCUEIL</a></li>
+                    <li><a href="froid-industriel.html" class="hover:text-white">FROID INDUSTRIEL</a></li>
+                    <li><a href="climatisation.html" class="hover:text-white">CLIMATISATION</a></li>
+                    <li><a href="equipements.html" class="hover:text-white">ÉQUIPEMENTS</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-sm mb-3">Coordonnées</h4>
+                <p class="mb-2"><i class="fa-solid fa-location-dot mr-2 text-sky-400"></i> Dakar, Sénégal</p>
+                <p class="mb-2"><i class="fa-solid fa-phone mr-2 text-sky-400"></i> 76 781 21 93</p>
+                <p class="mb-2"><i class="fa-brands fa-whatsapp mr-2 text-emerald-400"></i> 76 781 21 93</p>
+                <p><i class="fa-solid fa-envelope mr-2 text-sky-400"></i> pryncefroid@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOUTON FLOTTANT WHATSAPP -->
+    <a href="https://wa.me/221767812193?text=Bonjour%20MFE,%20je%20souhaite%20des%20informations." target="_blank" 
+       class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg text-2xl z-50 transition-transform hover:scale-110">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- SCRIPT JAVASCRIPT -->
+    <script>
+        function setChambreType(type) {
+            document.getElementById('q-type').value = type;
+        }
+
+        function submitChambreQuote(e) {
+            e.preventDefault();
+
+            const refNum = 'MFE-CF-' + Math.floor(1000 + Math.random() * 9000);
+            const name = document.getElementById('q-name').value;
+            const phone = document.getElementById('q-phone').value;
+            const email = document.getElementById('q-email').value || "Non renseigné";
+            const city = document.getElementById('q-city').value;
+            const type = document.getElementById('q-type').value;
+            const activity = document.getElementById('q-activity').value;
+            const volume = document.getElementById('q-volume').value || "Non précisé";
+            const temp = document.getElementById('q-temp').value || "Non précisée";
+            const rotation = document.getElementById('q-rotation').value || "Non précisée";
+            const power = document.getElementById('q-power').value;
+            const date = document.getElementById('q-date').value || "Non précisée";
+            const status = document.getElementById('q-status').value;
+            const comments = document.getElementById('q-comments').value || "Aucun";
+
+            let message = `*DEMANDE DE DEVIS CHAMBRE FROIDE*\n`;
+            message += `📌 *Référence:* ${refNum}\n\n`;
+            message += `👤 *Nom / Entreprise:* ${name}\n`;
+            message += `📞 *Téléphone:* ${phone}\n`;
+            message += `✉️ *Email:* ${email}\n`;
+            message += `📍 *Lieu du chantier:* ${city}\n\n`;
+            message += `🧊 *DÉTAILS DU PROJET:*\n`;
+            message += `• *Type:* Chambre Froide ${type}\n`;
+            message += `• *Activité:* ${activity}\n`;
+            message += `• *Volume / Dimensions:* ${volume}\n`;
+            message += `• *Température:* ${temp}\n`;
+            message += `• *Fréquence produits:* ${rotation}\n`;
+            message += `• *Alimentation:* ${power}\n\n`;
+            message += `📅 *CALENDRIER:*\n`;
+            message += `• *Statut:* ${status}\n`;
+            message += `• *Date:* ${date}\n`;
+            message += `• *Commentaires:* ${comments}\n\n`;
+            message += `Merci de traiter cette demande MFE.`;
+
+            const mfePhone = "221767812193";
+            const whatsappUrl = `https://wa.me/${mfePhone}?text=${encodeURIComponent(message)}`;
+
+            alert(`Référence ${refNum} générée ! Redirection vers WhatsApp pour l'envoi à MFE.`);
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climatisation - MFE | Vente & Installation au Sénégal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0284c7',
+                            darkblue: '#0369a1',
+                            navy: '#0f172a',
+                            accent: '#25d366'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .product-card { transition: all 0.2s ease-in-out; }
+        .product-card:hover { transform: translateY(-3px); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen flex flex-col">
+
+    <!-- TOP BAR DE CONTACT -->
+    <div class="bg-slate-900 text-slate-300 text-xs py-2.5 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-6">
+                <a href="tel:+221767812193" class="hover:text-sky-400 transition-colors flex items-center">
+                    <i class="fa-solid fa-phone text-sky-400 mr-2"></i> +221 76 781 21 93
+                </a>
+                <a href="mailto:pryncefroid@gmail.com" class="hover:text-sky-400 transition-colors flex items-center">
+                    <i class="fa-solid fa-envelope text-sky-400 mr-2"></i> pryncefroid@gmail.com
+                </a>
+                <span class="hidden md:flex items-center"><i class="fa-solid fa-location-dot text-sky-400 mr-2"></i> Dakar, Sénégal</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="https://wa.me/221767812193?text=Bonjour%20MFE,%20je%20souhaite%20un%20conseil%20climatisation." target="_blank" class="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center">
+                    <i class="fa-brands fa-whatsapp text-sm mr-1.5"></i> WhatsApp Direct
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER / NAVBAR -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+            
+            <a href="index.html" class="flex items-center space-x-3 shrink-0">
+                <img src="images/logo.png" alt="Logo MFE" class="h-12 w-auto object-contain" onerror="this.style.display='none'">
+                <div>
+                    <span class="text-xl font-black tracking-tight text-slate-900 block leading-tight">MONSIEUR FROID ÉQUIPEMENT</span>
+                    <span class="text-xs font-bold text-sky-600 block tracking-wider uppercase">Froid Industriel & Climatisation</span>
+                </div>
+            </a>
+
+            <!-- NAVIGATION PRINCIPALE -->
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-bold text-slate-700">
+                <a href="index.html" class="hover:text-sky-600 transition-colors pb-1">ACCUEIL</a>
+                <a href="froid-industriel.html" class="hover:text-sky-600 transition-colors pb-1">FROID INDUSTRIEL</a>
+                <a href="climatisation.html" class="text-sky-600 border-b-2 border-sky-600 pb-1">CLIMATISATION</a>
+                <a href="equipements.html" class="hover:text-sky-600 transition-colors pb-1">ÉQUIPEMENTS</a>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <a href="tel:+221767812193" class="bg-sky-600 hover:bg-sky-700 text-white text-xs md:text-sm font-bold px-4 py-2.5 rounded-lg shadow-md transition-all flex items-center space-x-2">
+                    <i class="fa-solid fa-headset"></i>
+                    <span>Conseil Climatisation</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- MENU MOBILE NAVBAR -->
+        <nav class="lg:hidden bg-slate-100 border-t border-slate-200 px-4 py-2 flex justify-around text-xs font-bold text-slate-700">
+            <a href="index.html" class="hover:text-sky-600">ACCUEIL</a>
+            <a href="froid-industriel.html" class="hover:text-sky-600">FROID IND.</a>
+            <a href="climatisation.html" class="text-sky-600">CLIMATISATION</a>
+            <a href="equipements.html" class="hover:text-sky-600">ÉQUIPEMENTS</a>
+        </nav>
+    </header>
+
+    <!-- BANNIÈRE HERO CLIMATISATION -->
+    <section class="bg-gradient-to-r from-sky-900 via-slate-900 to-sky-950 text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="max-w-2xl">
+                <span class="inline-block bg-sky-500/20 text-sky-300 text-xs font-bold px-3 py-1 rounded-full border border-sky-400/30 uppercase tracking-wider mb-3">
+                    Confort & Efficacité Énergétique
+                </span>
+                <h1 class="text-3xl md:text-4xl font-black tracking-tight leading-tight mb-3">
+                    Catalogue de Climatiseurs & Installation Pro au Sénégal
+                </h1>
+                <p class="text-slate-300 text-sm md:text-base mb-6">
+                    Découvrez nos modèles disponibles, comparez les puissances et achetez votre appareil seul ou avec forfait pose & mise en service par l'équipe MFE.
+                </p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                <a href="#catalogue" class="bg-sky-500 hover:bg-sky-600 text-white font-bold text-sm px-6 py-3 rounded-xl transition-all shadow-md text-center">
+                    Voir les Climatiseurs
+                </a>
+                <a href="#details-installation" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-sm px-6 py-3 rounded-xl border border-slate-700 transition-all text-center">
+                    Forfait Installation MFE
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION CATALOGUE & FILTRES -->
+    <main id="catalogue" class="max-w-7xl mx-auto px-4 py-10 flex-1 w-full">
+        
+        <!-- BARRE DE FILTRES UTILISATION (Demandés dans l'image) -->
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm mb-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-slate-100 pb-4 mb-4">
+                <div>
+                    <h2 class="text-xl font-black text-slate-900 flex items-center">
+                        <i class="fa-solid fa-wind text-sky-600 mr-2"></i> Nos Climatiseurs
+                    </h2>
+                    <p class="text-xs text-slate-500">Filtrer par marque, puissance BTU et technologie</p>
+                </div>
+                <span id="clim-count" class="text-xs font-bold bg-sky-50 text-sky-700 border border-sky-200 px-3 py-1 rounded-full">
+                    6 modèles disponibles
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Filtre Marque -->
+                <div>
+                    <label class="block text-[11px] font-bold text-slate-600 uppercase mb-1">Marque</label>
+                    <select id="filter-brand" onchange="applyFilters()" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2 text-xs font-medium focus:ring-2 focus:ring-sky-500 outline-none">
+                        <option value="all">Toutes les marques</option>
+                        <option value="Gree">Gree</option>
+                        <option value="Carrier">Carrier</option>
+                        <option value="LG">LG</option>
+                        <option value="Haier">Haier</option>
+                    </select>
+                </div>
+
+                <!-- Filtre Puissance BTU -->
+                <div>
+                    <label class="block text-[11px] font-bold text-slate-600 uppercase mb-1">Puissance (BTU)</label>
+                    <select id="filter-btu" onchange="applyFilters()" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2 text-xs font-medium focus:ring-2 focus:ring-sky-500 outline-none">
+                        <option value="all">Toutes les puissances</option>
+                        <option value="9000">9 000 BTU (1 CV)</option>
+                        <option value="12000">12 000 BTU (1.5 CV)</option>
+                        <option value="18000">18 000 BTU (2 CV)</option>
+                        <option value="24000">24 000 BTU (3 CV)</option>
+                    </select>
+                </div>
+
+                <!-- Technologie -->
+                <div>
+                    <label class="block text-[11px] font-bold text-slate-600 uppercase mb-1">Technologie</label>
+                    <select id="filter-tech" onchange="applyFilters()" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2 text-xs font-medium focus:ring-2 focus:ring-sky-500 outline-none">
+                        <option value="all">Toutes les technologies</option>
+                        <option value="Inverter">Inverter (Économique)</option>
+                        <option value="Classique">Classique (On/Off)</option>
+                    </select>
+                </div>
+
+                <!-- Trier par prix -->
+                <div>
+                    <label class="block text-[11px] font-bold text-slate-600 uppercase mb-1">Tri par Prix</label>
+                    <select id="filter-sort" onchange="applyFilters()" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2 text-xs font-medium focus:ring-2 focus:ring-sky-500 outline-none">
+                        <option value="default">Par défaut</option>
+                        <option value="asc">Prix croissant</option>
+                        <option value="desc">Prix décroissant</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- GRILLE DES CLIMATISEURS -->
+        <div id="clim-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Injecté via JavaScript -->
+        </div>
+    </main>
+
+    <!-- SECTION DÉTAILS DE L'INSTALLATION (Inclus / Exclus selon exigence image) -->
+    <section id="details-installation" class="py-16 px-4 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="bg-sky-100 text-sky-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Service Professionnel MFE</span>
+                <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-2">Détails de nos Forfaits d'Installation</h2>
+                <p class="text-slate-600 text-sm mt-1">Transparence totale sur nos interventions d'installation de climatisation.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- CE QUI EST INCLUS -->
+                <div class="bg-slate-50 border border-emerald-200 p-6 md:p-8 rounded-2xl">
+                    <h3 class="text-lg font-bold text-emerald-800 mb-4 flex items-center">
+                        <i class="fa-solid fa-circle-check mr-2 text-emerald-600 text-xl"></i> Ce qui est INCLUS dans le forfait pose
+                    </h3>
+                    <ul class="space-y-3 text-sm text-slate-700">
+                        <li class="flex items-start"><i class="fa-solid fa-check text-emerald-600 mt-1 mr-2.5"></i> Pose et fixation de l'unité intérieure et de l'unité extérieure.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-emerald-600 mt-1 mr-2.5"></i> Liaison frigorifique standard en cuivre (jusqu'à 3 mètres).</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-emerald-600 mt-1 mr-2.5"></i> Percement de mur standard et raccordement électrique.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-emerald-600 mt-1 mr-2.5"></i> Tirage au vide de l'installation et mise en service technique.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-emerald-600 mt-1 mr-2.5"></i> Test d'étanchéité et explication du fonctionnement de la télécommande.</li>
+                    </ul>
+                </div>
+
+                <!-- CONDITIONS ET EXCLUSIONS -->
+                <div class="bg-slate-50 border border-amber-200 p-6 md:p-8 rounded-2xl">
+                    <h3 class="text-lg font-bold text-amber-800 mb-4 flex items-center">
+                        <i class="fa-solid fa-triangle-exclamation mr-2 text-amber-600 text-xl"></i> Éventuels suppléments & Conditions
+                    </h3>
+                    <ul class="space-y-3 text-sm text-slate-700">
+                        <li class="flex items-start"><i class="fa-solid fa-plus text-amber-600 mt-1 mr-2.5"></i> Tuyauterie en cuivre supplémentaire au-delà des 3m incluses.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-plus text-amber-600 mt-1 mr-2.5"></i> Travaux de maçonnerie complexes ou passage en hauteur nécessitant un échafaudage.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-plus text-amber-600 mt-1 mr-2.5"></i> Ajout d'un disjoncteur dédié si le tableau électrique est saturé.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-circle-info text-amber-600 mt-1 mr-2.5"></i> Le coût final d'installation est reconfirmé par MFE selon les contraintes du chantier.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL COMMANDE / DEMANDE AVEC INSTALLATION -->
+    <div id="order-modal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-lg rounded-2xl shadow-2xl p-6 relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h3 id="modal-title" class="text-lg font-black text-slate-900 mb-1">Commander mon Climatiseur</h3>
+            <p id="modal-subtitle" class="text-xs text-sky-600 font-bold mb-4"></p>
+
+            <form onsubmit="submitClimOrder(event)" class="space-y-4">
+                <input type="hidden" id="modal-clim-name">
+                <input type="hidden" id="modal-clim-price">
+
+                <!-- OPTION AVEC INSTALLATION (Case à cocher) -->
+                <div class="bg-sky-50 border border-sky-200 p-3.5 rounded-xl">
+                    <label class="flex items-center space-x-3 cursor-pointer">
+                        <input type="checkbox" id="modal-with-install" onchange="toggleInstallFields()" class="w-4 h-4 text-sky-600 rounded">
+                        <span class="text-xs font-bold text-slate-900">Je souhaite aussi l'installation par MFE</span>
+                    </label>
+                </div>
+
+                <!-- CHAMPS COORDONNÉES -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Nom Complet / Entreprise *</label>
+                    <input type="text" id="modal-name" required placeholder="Votre nom" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 text-xs outline-none focus:ring-2 focus:ring-sky-500">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Téléphone / WhatsApp *</label>
+                    <input type="tel" id="modal-phone" required placeholder="76 781 21 93" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 text-xs outline-none focus:ring-2 focus:ring-sky-500">
+                </div>
+
+                <!-- CHAMPS SPÉCIFIQUES INSTALLATION (AFFICHER SI COCHÉ) -->
+                <div id="install-fields" class="space-y-3 hidden border-t border-slate-200 pt-3">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Ville / Quartier du chantier *</label>
+                        <input type="text" id="modal-city" placeholder="Ex: Dakar, Almadies, Pikine..." class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 text-xs outline-none focus:ring-2 focus:ring-sky-500">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Type de bâtiment</label>
+                        <select id="modal-building" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 text-xs outline-none focus:ring-2 focus:ring-sky-500">
+                            <option value="Maison / Appartement">Maison / Appartement</option>
+                            <option value="Bureau / Commerce">Bureau / Commerce</option>
+                            <option value="Immeuble / Chantier en cours">Immeuble / Chantier en cours</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Précisions utiles (ex: étage, accès...)</label>
+                        <textarea id="modal-notes" rows="2" placeholder="Précisez l'emplacement de l'appareil..." class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 text-xs outline-none focus:ring-2 focus:ring-sky-500"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl shadow transition-colors flex items-center justify-center space-x-2 text-sm">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Envoyer ma commande via WhatsApp</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-12 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <div class="flex items-center space-x-3 text-white font-bold text-lg mb-3">
+                    <div class="w-8 h-8 bg-sky-600 text-white rounded-lg flex items-center justify-center text-sm">MFE</div>
+                    <span>MONSIEUR FROID ÉQUIPEMENT</span>
+                </div>
+                <p class="text-slate-400 leading-relaxed mb-4">Le savoir-faire technique au service de vos projets.</p>
+                <p class="text-slate-500">© 2026 MONSIEUR FROID ÉQUIPEMENT (MFE). Tous droits réservés.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-sm mb-3">Navigation</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-white">ACCUEIL</a></li>
+                    <li><a href="froid-industriel.html" class="hover:text-white">FROID INDUSTRIEL</a></li>
+                    <li><a href="climatisation.html" class="hover:text-white">CLIMATISATION</a></li>
+                    <li><a href="equipements.html" class="hover:text-white">ÉQUIPEMENTS</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-sm mb-3">Coordonnées</h4>
+                <p class="mb-2"><i class="fa-solid fa-location-dot mr-2 text-sky-400"></i> Dakar, Sénégal</p>
+                <p class="mb-2"><i class="fa-solid fa-phone mr-2 text-sky-400"></i> 76 781 21 93</p>
+                <p class="mb-2"><i class="fa-brands fa-whatsapp mr-2 text-emerald-400"></i> 76 781 21 93</p>
+                <p><i class="fa-solid fa-envelope mr-2 text-sky-400"></i> pryncefroid@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOUTON FLOTTANT WHATSAPP -->
+    <a href="https://wa.me/221767812193?text=Bonjour%20MFE,%20je%20souhaite%20commander%20un%20climatiseur." target="_blank" 
+       class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg text-2xl z-50 transition-transform hover:scale-110">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- SCRIPT JAVASCRIPT ET GESTION DU CATALOGUE DE CLIMATISEURS -->
+    <script>
+        // DONNÉES CATALOGUE CLIMATISEURS MFE (Modifiables facilement)
+        const climProducts = [
+            {
+                id: 1,
+                brand: "Gree",
+                ref: "GREE-09-INV",
+                name: "Climatiseur Split Gree Inverter 9 000 BTU",
+                btu: 9000,
+                tech: "Inverter",
+                energy: "A++",
+                priceFCFA: 195000,
+                stock: "En stock",
+                image: "images/Premier.png",
+                features: "Silencieux, Économie d'énergie jusqu'à 60%, Gaz R410A écologique."
+            },
+            {
+                id: 2,
+                brand: "Gree",
+                ref: "GREE-12-INV",
+                name: "Climatiseur Split Gree Inverter 12 000 BTU",
+                btu: 12000,
+                tech: "Inverter",
+                energy: "A++",
+                priceFCFA: 235000,
+                stock: "En stock",
+                image: "images/2eme.png",
+                features: "Refroidissement rapide, Filtre purificateur d'air, Idéal chambre/bureau."
+            },
+            {
+                id: 3,
+                brand: "Carrier",
+                ref: "CAR-18-INV",
+                name: "Climatiseur Split Carrier Inverter 18 000 BTU",
+                btu: 18000,
+                tech: "Inverter",
+                energy: "A+++",
+                priceFCFA: 385000,
+                stock: "En stock",
+                image: "images/3eme.png",
+                features: "Haute performance tropicalisée, résistance aux fortes chaleurs de Dakar."
+            },
+            {
+                id: 4,
+                brand: "LG",
+                ref: "LG-24-DUAL",
+                name: "Climatiseur LG Dual Inverter 24 000 BTU",
+                btu: 24000,
+                tech: "Inverter",
+                energy: "A+++",
+                priceFCFA: 495000,
+                stock: "Sur commande",
+                image: "images/4eme.png",
+                features: "Grandes surfaces / salons, Compresseur Dual Inverter garanti 10 ans."
+            },
+            {
+                id: 5,
+                brand: "Haier",
+                ref: "HAI-12-STD",
+                name: "Climatiseur Haier Classique 12 000 BTU",
+                btu: 12000,
+                tech: "Classique",
+                energy: "A+",
+                priceFCFA: 180000,
+                stock: "En stock",
+                image: "images/5eme.png",
+                features: "Robuste, Entretien facile, Excellent rapport qualité/prix."
+            },
+            {
+                id: 6,
+                brand: "Carrier",
+                ref: "CAR-24-CAS",
+                name: "Climatiseur Cassette Carrier 24 000 BTU (Tertiaire)",
+                btu: 24000,
+                tech: "Inverter",
+                energy: "A++",
+                priceFCFA: 650000,
+                stock: "En stock",
+                image: "images/6eme.png",
+                features: "Encastrable faux-plafond, soufflage 360°, parfait pour bureaux et commerces."
+            }
+        ];
+
+        let currentProducts = [...climProducts];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderClimProducts(currentProducts);
+        });
+
+        // RENDER PRODUCTS GRID
+        function renderClimProducts(items) {
+            const grid = document.getElementById('clim-grid');
+            document.getElementById('clim-count').innerText = `${items.length} modèle(s) disponible(s)`;
+
+            if (items.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-12 text-slate-500">Aucun climatiseur ne correspond à ces critères.</div>`;
+                return;
+            }
+
+            grid.innerHTML = items.map(p => `
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden product-card flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 bg-slate-100 relative overflow-hidden">
+                            <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-slate-900/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-sm">
+                                Réf: ${p.ref}
+                            </span>
+                            <span class="absolute top-3 right-3 ${p.stock === 'En stock' ? 'bg-emerald-600' : 'bg-amber-600'} text-white text-[10px] font-bold px-2.5 py-1 rounded-md">
+                                ${p.stock}
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-xs font-black text-sky-600 uppercase tracking-wider">${p.brand} • ${p.btu.toLocaleString()} BTU</span>
+                                <span class="text-[10px] bg-slate-100 text-slate-700 font-bold px-2 py-0.5 rounded border border-slate-200">${p.tech}</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-base leading-snug mb-2">${p.name}</h3>
+                            <p class="text-slate-500 text-xs line-clamp-2 mb-3">${p.features}</p>
+                            <span class="inline-block bg-sky-50 text-sky-700 text-[10px] font-bold px-2 py-0.5 rounded border border-sky-100 mb-2">Classe Énergétique : ${p.energy}</span>
+                        </div>
+                    </div>
+
+                    <div class="p-5 pt-0">
+                        <div class="text-xl font-black text-slate-900 mb-4">${p.priceFCFA.toLocaleString('fr-FR')} FCFA</div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button onclick="openOrderModal('${p.name}', ${p.priceFCFA}, false)" class="bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs py-2.5 px-2 rounded-xl transition-colors border border-slate-300">
+                                Appareil seul
+                            </button>
+                            <button onclick="openOrderModal('${p.name}', ${p.priceFCFA}, true)" class="bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs py-2.5 px-2 rounded-xl transition-colors flex items-center justify-center space-x-1">
+                                <i class="fa-solid fa-wrench text-[10px]"></i>
+                                <span>Avec Pose</span>
+                            </button>
+                        </div>
+                        <!-- CONTACT DIRECT WHATSAPP / TELEPHONE DES FICHES PRODUITS (Demandé sur image) -->
+                        <div class="mt-3 pt-3 border-t border-slate-100 flex justify-between text-[11px]">
+                            <a href="https://wa.me/221767812193?text=Bonjour%20MFE,%20je%20souhaite%20des%20infos%20sur%20le%20:${encodeURIComponent(p.name)}" target="_blank" class="text-emerald-600 font-bold hover:underline flex items-center">
+                                <i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp
+                            </a>
+                            <a href="tel:+221767812193" class="text-sky-600 font-bold hover:underline flex items-center">
+                                <i class="fa-solid fa-phone mr-1"></i> Appeler MFE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // APLIQUER FILTRES DE RECHERCHE
+        function applyFilters() {
+            const brand = document.getElementById('filter-brand').value;
+            const btu = document.getElementById('filter-btu').value;
+            const tech = document.getElementById('filter-tech').value;
+            const sort = document.getElementById('filter-sort').value;
+
+            let filtered = climProducts.filter(p => {
+                const matchBrand = (brand === 'all') || (p.brand === brand);
+                const matchBtu = (btu === 'all') || (p.btu === parseInt(btu));
+                const matchTech = (tech === 'all') || (p.tech === tech);
+                return matchBrand && matchBtu && matchTech;
+            });
+
+            if (sort === 'asc') {
+                filtered.sort((a, b) => a.priceFCFA - b.priceFCFA);
+            } else if (sort === 'desc') {
+                filtered.sort((a, b) => b.priceFCFA - a.priceFCFA);
+            }
+
+            renderClimProducts(filtered);
+        }
+
+        // GESTION MODAL COMMANDE ET INSTALLATION
+        function openOrderModal(climName, price, withInstall) {
+            document.getElementById('modal-clim-name').value = climName;
+            document.getElementById('modal-clim-price').value = price;
+            document.getElementById('modal-title').innerText = climName;
+            document.getElementById('modal-subtitle').innerText = `Prix appareil : ${price.toLocaleString('fr-FR')} FCFA`;
+            
+            const checkbox = document.getElementById('modal-with-install');
+            checkbox.checked = withInstall;
+            toggleInstallFields();
+
+            document.getElementById('order-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('order-modal').classList.add('hidden');
+        }
+
+        function toggleInstallFields() {
+            const withInstall = document.getElementById('modal-with-install').checked;
+            const fields = document.getElementById('install-fields');
+            if (withInstall) {
+                fields.classList.remove('hidden');
+                document.getElementById('modal-city').setAttribute('required', 'true');
+            } else {
+                fields.classList.add('hidden');
+                document.getElementById('modal-city').removeAttribute('required');
+            }
+        }
+
+        function submitClimOrder(e) {
+            e.preventDefault();
+
+            const climName = document.getElementById('modal-clim-name').value;
+            const price = document.getElementById('modal-clim-price').value;
+            const withInstall = document.getElementById('modal-with-install').checked;
+            const name = document.getElementById('modal-name').value;
+            const phone = document.getElementById('modal-phone').value;
+
+            let message = `*COMMANDE CLIMATISATION - MFE*\n\n`;
+            message += `❄️ *Modèle sélectionné:* ${climName}\n`;
+            message += `💰 *Prix appareil:* ${parseInt(price).toLocaleString('fr-FR')} FCFA\n`;
+            message += `🔧 *Option d'installation:* ${withInstall ? 'OUI (Installation par MFE demandée)' : 'NON (Achat appareil seul)'}\n\n`;
+            message += `👤 *Client:* ${name}\n`;
+            message += `📞 *Téléphone:* ${phone}\n`;
+
+            if (withInstall) {
+                const city = document.getElementById('modal-city').value;
+                const building = document.getElementById('modal-building').value;
+                const notes = document.getElementById('modal-notes').value || "Aucune";
+
+                message += `\n📍 *DÉTAILS CHANTIER INSTALLATION:*\n`;
+                message += `• *Ville / Quartier:* ${city}\n`;
+                message += `• *Bâtiment:* ${building}\n`;
+                message += `• *Précisions:* ${notes}\n`;
+            }
+
+            message += `\nMerci de confirmer la disponibilité et le rendez-vous.`;
+
+            const mfePhone = "221767812193";
+            const whatsappUrl = `https://wa.me/${mfePhone}?text=${encodeURIComponent(message)}`;
+
+            closeModal();
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
